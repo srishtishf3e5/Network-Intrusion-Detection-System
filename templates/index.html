@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Network Intrusion Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🛡️ Network Intrusion Detection System</h1>
+
+        <p class="subtitle">
+            Machine Learning Based Intrusion Detection using NSL-KDD Dataset
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Duration</label>
+
+                    <input type="number"
+                           name="duration"
+                           placeholder="Enter Duration"
+                           required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Protocol Type</label>
+
+                    <select name="protocol_type">
+
+                        <option value="0">ICMP</option>
+                        <option value="1">TCP</option>
+                        <option value="2">UDP</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Service</label>
+
+                    <input type="number"
+                           name="service"
+                           placeholder="Example: 20"
+                           required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Flag</label>
+
+                    <input type="number"
+                           name="flag"
+                           placeholder="Example: 9"
+                           required>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-box">
+
+                    <label>Source Bytes</label>
+
+                    <input type="number"
+                           name="src_bytes"
+                           placeholder="Enter Source Bytes"
+                           required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Destination Bytes</label>
+
+                    <input type="number"
+                           name="dst_bytes"
+                           placeholder="Enter Destination Bytes"
+                           required>
+
+                </div>
+
+            </div>
+
+            <button type="submit">
+
+                Predict Traffic
+
+            </button>
+
+        </form>
+
+        {% if prediction %}
+
+        <div class="result" style="border-left:8px solid {{color}};">
+
+            <h2>{{prediction}}</h2>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+    <div class="info">
+
+        <h2>Project Information</h2>
+
+        <table>
+
+            <tr>
+
+                <td>Dataset</td>
+
+                <td>NSL-KDD</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Algorithm</td>
+
+                <td>Random Forest</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Problem Type</td>
+
+                <td>Binary Classification</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Features</td>
+
+                <td>42</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

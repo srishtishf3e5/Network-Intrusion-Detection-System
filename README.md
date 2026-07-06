@@ -206,7 +206,8 @@ http://127.0.0.1:5000
 
 **Srishti Sharma**
 
-Machine Learning Intern
+Machine Learning Intern - https://www.codtechitsolutions.com/
+Intern ID - CITS3980
 
 ---
 

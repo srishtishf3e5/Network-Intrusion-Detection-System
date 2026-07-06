@@ -175,23 +175,18 @@ http://127.0.0.1:5000
 ## 📸 Project Screenshots
 
 ### Home Page
-
 ![Home Page](screenshots/home_page.png)
 
 ### Prediction Result
-
 ![Prediction Result](screenshots/prediction_result.png)
 
 ### Attack Distribution
-
 ![Attack Distribution](screenshots/attack_distribution.png)
 
 ### Correlation Heatmap
-
 ![Correlation Heatmap](screenshots/correlation_heatmap.png)
 
 ### Model Comparison
-
 ![Model Comparison](screenshots/model_comparison.png)
 
 ---
